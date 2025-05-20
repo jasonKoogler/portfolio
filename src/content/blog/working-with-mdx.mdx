@@ -1,0 +1,58 @@
+---
+title: Working with MDX in React
+date: '2023-10-28'
+excerpt: Explore the power of MDX for creating interactive and dynamic content in React applications.
+---
+
+# Working with MDX in React
+
+MDX is a powerful combination of Markdown and JSX that allows you to write content with embedded React components. This makes it perfect for technical documentation, blogs, and any content that benefits from interactive elements.
+
+## What is MDX?
+
+MDX is an extension of Markdown that lets you include JSX in your markdown content. It provides a seamless way to integrate dynamic components within what would otherwise be static content.
+
+## Setting Up MDX in a React Project
+
+To get started with MDX in your React project, you'll need to install a few dependencies:
+
+```bash
+npm install @mdx-js/react @mdx-js/loader
+```
+
+If you're using Next.js, the process is even simpler with the `@next/mdx` package.
+
+## Creating Interactive Blog Posts
+
+One of the biggest advantages of MDX is the ability to create interactive blog posts. Here's a simple example:
+
+```jsx
+import { useState } from 'react'
+
+# Interactive Counter Example
+
+This is a regular markdown paragraph.
+
+<div style={{ padding: '20px', background: '#f0f0f0', borderRadius: '5px' }}>
+  {() => {
+    const [count, setCount] = useState(0)
+    return (
+      <div>
+        <p>Count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+      </div>
+    )
+  }}
+</div>
+
+Back to regular markdown content!
+```
+
+## Benefits of Using MDX
+
+- **Component Reuse**: Create and use custom components across your content
+- **Interactive Documentation**: Build interactive examples that demonstrate code functionality
+- **Rich Content**: Combine the simplicity of Markdown with the power of React
+- **Developer Experience**: Write in a familiar syntax with the power of React's ecosystem
+
+MDX bridges the gap between writing content and building interactive experiences, making it an excellent choice for modern web applications. 

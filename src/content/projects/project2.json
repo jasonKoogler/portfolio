@@ -1,0 +1,10 @@
+{
+  "id": "project2",
+  "title": "Weather Dashboard",
+  "description": "An interactive weather dashboard that displays current conditions and forecasts for any location.",
+  "technologies": ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
+  "imageUrl": "/project2.jpg",
+  "githubUrl": "https://github.com/yourusername/weather-dashboard",
+  "demoUrl": "https://weather.yourdomain.com",
+  "details": "This weather dashboard provides real-time weather information for any location worldwide. Users can search for cities, view current conditions, hourly forecasts, and 7-day forecasts. The application features interactive charts for temperature, precipitation, wind speed, and humidity using Chart.js. Data is fetched from the OpenWeather API and displayed in a clean, responsive interface built with React and styled with Tailwind CSS."
+}

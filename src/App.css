@@ -3,8 +3,8 @@
 
 @theme {
   --font-sans: "Press Start 2P", cursive;
-  --scanlines: scanlines 8s linear infinite;
-  --flicker: flicker 9.3s infinite alternate;
+  --scanlines: scanlines 2s linear infinite;
+  --flicker: flicker 3s infinite alternate;
 
   @keyframes scanlines {
     0% {
@@ -17,7 +17,10 @@
 
   @keyframes flicker {
     0% {
-      opacity: 0.1;
+      opacity: 0.01;
+    }
+    70% {
+      opacity: 0;
     }
     100% {
       opacity: 0;
@@ -25,17 +28,29 @@
   }
 }
 
-@utility .crt-button {
-  @apply bg-zinc-800 text-[#33ff33] border border-[#33ff33] px-4 py-2 cursor-pointer 
+@layer utilities {
+  .animate-scanlines {
+    animation: scanlines 8s linear infinite;
+  }
+  
+  .animate-flicker {
+    animation: flicker 0.03s infinite alternate-reverse;
+  }
+}
+
+@layer components {
+  .crt-button {
+    @apply bg-zinc-800 text-[#33ff33] border border-[#33ff33] px-4 py-2 cursor-pointer 
            shadow-[0_0_5px_rgba(51,255,51,0.7)] 
            hover:bg-zinc-700 hover:shadow-[0_0_10px_rgba(51,255,51,0.5)];
-}
+  }
 
-@utility .crt-input {
-  @apply bg-[rgba(0,0,0,0.5)] border border-[#33ff33] p-3 text-[#33ff33] 
+  .crt-input {
+    @apply bg-[rgba(0,0,0,0.5)] border border-[#33ff33] p-3 text-[#33ff33] 
            font-mono focus:outline-none focus:shadow-[0_0_10px_rgba(51,255,51,0.5)];
-}
+  }
 
-@utility .crt-card {
-  @apply border border-[#33ff33] p-5 rounded transition-all hover:shadow-[0_0_15px_rgba(51,255,51,0.3)];
+  .crt-card {
+    @apply border border-[#33ff33] p-5 rounded transition-all hover:shadow-[0_0_15px_rgba(51,255,51,0.3)];
+  }
 }

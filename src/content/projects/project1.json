@@ -1,0 +1,10 @@
+{
+  "id": "project1",
+  "title": "CRT Portfolio",
+  "description": "A retro-themed portfolio website with CRT monitor effects built using React and Tailwind CSS.",
+  "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite"],
+  "imageUrl": "/project1.jpg",
+  "githubUrl": "https://github.com/yourusername/crt-portfolio",
+  "demoUrl": "https://crt-portfolio.yourdomain.com",
+  "details": "This portfolio website features a retro CRT monitor aesthetic with authentic scan lines, flicker effects, and a green monochrome color scheme. Built with React, TypeScript, and Tailwind CSS, it showcases my projects and skills in a unique and memorable way."
+}

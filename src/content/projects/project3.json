@@ -1,0 +1,9 @@
+{
+  "id": "project3",
+  "title": "Task Management API",
+  "description": "A RESTful API for task management with authentication, task CRUD operations, and team collaboration features.",
+  "technologies": ["Node.js", "Express", "MongoDB", "JWT"],
+  "imageUrl": "/project3.jpg",
+  "githubUrl": "https://github.com/yourusername/task-api",
+  "details": "This Task Management API provides a robust backend for task tracking applications. It features user authentication and authorization using JWT, complete CRUD operations for tasks and projects, team collaboration functionality, and role-based permissions. The API is built with Node.js and Express, with data stored in MongoDB. The codebase follows a modular architecture with comprehensive error handling and input validation."
+} 
