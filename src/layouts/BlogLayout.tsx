@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router';
-import CRTEffect from '../components/CRTEffect';
 
 const BlogLayout: React.FC = () => {
   const navigate = useNavigate();
   
   return (
-    <CRTEffect>
+    <>
       <header className="mb-8">
         <button 
           onClick={() => navigate(-1)} 
@@ -29,7 +28,7 @@ const BlogLayout: React.FC = () => {
         </div>
         <p>&copy; {new Date().getFullYear()} Your Name - Made with a CRT Monitor</p>
       </footer>
-    </CRTEffect>
+    </>
   );
 };
 

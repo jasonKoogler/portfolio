@@ -11,19 +11,23 @@ import ProjectsPage from './pages/ProjectsPage';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="blog" element={<BlogPage />} />
-          <Route path="projects" element={<ProjectsPage />} />
-          <Route path="contact" element={<ContactPage />} />
-        </Route>
-        <Route path="/blog/:slug" element={<BlogLayout />}>
-          <Route index element={<BlogPostPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className=' min-h-screen min-w-screen bg-zinc-900 p-10 '>
+      <div className="overflow-y-auto">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="blog" element={<BlogPage />} />
+              <Route path="projects" element={<ProjectsPage />} />
+              <Route path="contact" element={<ContactPage />} />
+            </Route>
+            <Route path="/blog/:slug" element={<BlogLayout />}>
+              <Route index element={<BlogPostPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 };
 
