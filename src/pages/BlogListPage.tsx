@@ -8,7 +8,7 @@ interface BlogPost {
   excerpt: string;
 }
 
-const BlogPage: React.FC = () => {
+const BlogListPage: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([
     {
       slug: 'creating-crt-effects',
@@ -33,7 +33,7 @@ const BlogPage: React.FC = () => {
   return (
     <div>
       <h1 className="text-2xl mb-8 font-bold tracking-wider">BLOG ENTRIES</h1>
-      
+
       <div className="grid gap-8">
         {posts.map((post) => (
           <article key={post.slug} className="border border-[#33ff33] p-5 hover:shadow-[0_0_12px_rgba(51,255,51,0.3)] transition-all">
@@ -46,8 +46,8 @@ const BlogPage: React.FC = () => {
               })}
             </div>
             <p className="mb-4">{post.excerpt}</p>
-            <Link 
-              to={`/blog/${post.slug}`} 
+            <Link
+              to={`/blog/${post.slug}`}
               className="inline-block px-4 py-2 border border-[#33ff33] hover:shadow-[0_0_8px_rgba(51,255,51,0.5)] transition-all"
             >
               READ POST &gt;
@@ -59,4 +59,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+export default BlogListPage;

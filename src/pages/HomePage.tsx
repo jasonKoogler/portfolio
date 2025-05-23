@@ -11,8 +11,8 @@ const HomePage: React.FC = () => {
   });
 
   return (
-    <div className="w-full h-full ">
-      <pre className="font-mono whitespace-pre-wrap leading-relaxed text-lg mb-8">{displayedText}</pre>
+    <div className="w-full h-full flex flex-col bg-background p-4">
+      <pre className="text-[#24d524db] font-mono whitespace-pre-wrap leading-relaxed text-lg mb-8">{displayedText}</pre>
       {isComplete && (
         <div className="flex gap-4 mt-5">
           <Link to="/projects" className="crt-button">VIEW PROJECTS</Link>

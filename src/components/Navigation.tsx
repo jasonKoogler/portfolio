@@ -3,49 +3,33 @@ import { Link, useLocation } from 'react-router';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
-  
+
   return (
-    <nav className="mb-8 pb-4 border-b border-[#33ff33]">
+    <nav className="bg-background p-4 border-b border-[#33ff33]">
       <div className="flex gap-5">
-        <Link 
-          to="/" 
-          className={`px-3 py-1 uppercase tracking-wider transition-all ${
-            location.pathname === '/' 
-              ? 'border border-[#33ff33] shadow-[0_0_8px_rgba(51,255,51,0.5)]' 
-              : ''
-          }`}
+        <Link
+          to="/"
+          className={`nav-link ${location.pathname === '/' ? 'nav-link-active' : ''}`}
         >
-          HOME
+          <span className="nav-link-text">HOME</span>
         </Link>
-        <Link 
-          to="/blog" 
-          className={`px-3 py-1 uppercase tracking-wider transition-all ${
-            location.pathname === '/blog' 
-              ? 'border border-[#33ff33] shadow-[0_0_8px_rgba(51,255,51,0.5)]' 
-              : ''
-          }`}
+        <Link
+          to="/blog"
+          className={`nav-link ${location.pathname === '/blog' ? 'nav-link-active' : ''}`}
         >
-          BLOG
+          <span className="nav-link-text">BLOG</span>
         </Link>
-        <Link 
-          to="/projects" 
-          className={`px-3 py-1 uppercase tracking-wider transition-all ${
-            location.pathname === '/projects' 
-              ? 'border border-[#33ff33] shadow-[0_0_8px_rgba(51,255,51,0.5)]' 
-              : ''
-          }`}
+        <Link
+          to="/projects"
+          className={`nav-link ${location.pathname === '/projects' ? 'nav-link-active' : ''}`}
         >
-          PROJECTS
+          <span className="nav-link-text">PROJECTS</span>
         </Link>
-        <Link 
-          to="/contact" 
-          className={`px-3 py-1 uppercase tracking-wider transition-all ${
-            location.pathname === '/contact' 
-              ? 'border border-[#33ff33] shadow-[0_0_8px_rgba(51,255,51,0.5)]' 
-              : ''
-          }`}
+        <Link
+          to="/contact"
+          className={`nav-link ${location.pathname === '/contact' ? 'nav-link-active' : ''}`}
         >
-          CONTACT
+          <span className="nav-link-text">CONTACT</span>
         </Link>
       </div>
     </nav>

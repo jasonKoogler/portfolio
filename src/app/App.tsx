@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import BlogPage from '../pages/BlogPage';
+import BlogListPage from '../pages/BlogListPage';
 import BlogPostPage from '../pages/BlogPostPage';
 import ContactPage from '../pages/ContactPage';
 import HomePage from '../pages/HomePage';
-import ProjectsPage from '../pages/ProjectsPage';
+import ProjectsListPage from '../pages/ProjectsListPage';
 import "./App.css";
 import BlogLayout from './layouts/BlogLayout';
 import MainLayout from './layouts/MainLayout';
@@ -17,8 +17,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<HomePage />} />
-              <Route path="blog" element={<BlogPage />} />
-              <Route path="projects" element={<ProjectsPage />} />
+              <Route path="blog" element={<BlogListPage />} />
+              <Route path="projects" element={<ProjectsListPage />} />
               <Route path="contact" element={<ContactPage />} />
             </Route>
             <Route path="/blog/:slug" element={<BlogLayout />}>

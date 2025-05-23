@@ -7,6 +7,7 @@ type Props = {
     bottomSlot?: ReactNode
     announcementSlot?: ReactNode
     sidebarSlot?: ReactNode
+    children?: ReactNode
 }
 
 export const Layout = (props: Props) => {
@@ -17,7 +18,7 @@ export const Layout = (props: Props) => {
             {props.headerSlot}
             <div className="flex flex-1 overflow-hidden">
                 {props.sidebarSlot}
-                <Outlet />
+                {props.children || <Outlet />}
             </div>
             {props.bottomSlot && (
                 <div className="flex flex-col">{props.bottomSlot}</div>

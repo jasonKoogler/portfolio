@@ -10,7 +10,7 @@ interface Project {
   demoUrl?: string;
 }
 
-const ProjectsPage: React.FC = () => {
+const ProjectsListPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([
     {
       id: 'project1',
@@ -43,17 +43,17 @@ const ProjectsPage: React.FC = () => {
   return (
     <div>
       <h1 className="text-2xl mb-8 font-bold tracking-wider">PROJECTS</h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
           <div key={project.id} className="border border-[#33ff33] p-5 hover:shadow-[0_0_12px_rgba(51,255,51,0.3)] transition-all">
             <div className="h-40 mb-4 bg-zinc-800 flex items-center justify-center overflow-hidden">
               <div className="text-sm opacity-50">[Project Image: {project.title}]</div>
             </div>
-            
+
             <h2 className="text-xl font-bold mb-2">{project.title}</h2>
             <p className="mb-4">{project.description}</p>
-            
+
             <div className="mb-4">
               <h3 className="text-sm opacity-70 mb-2">TECHNOLOGIES</h3>
               <div className="flex flex-wrap gap-2">
@@ -64,21 +64,21 @@ const ProjectsPage: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="flex gap-4">
-              <a 
-                href={project.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-4 py-2 border border-[#33ff33] hover:shadow-[0_0_8px_rgba(51,255,51,0.5)] transition-all"
               >
                 GITHUB
               </a>
               {project.demoUrl && (
-                <a 
-                  href={project.demoUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-4 py-2 border border-[#33ff33] hover:shadow-[0_0_8px_rgba(51,255,51,0.5)] transition-all"
                 >
                   LIVE DEMO
@@ -92,4 +92,4 @@ const ProjectsPage: React.FC = () => {
   );
 };
 
-export default ProjectsPage;
+export default ProjectsListPage;

@@ -53,4 +53,23 @@
   .crt-card {
     @apply border border-[#33ff33] p-5 rounded transition-all hover:shadow-[0_0_15px_rgba(51,255,51,0.3)];
   }
+
+  .bg-background {
+    @apply bg-zinc-900;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 uppercase tracking-wider transition-all rounded-md;
+  }
+
+  .nav-link-active {
+    @apply border border-[#33ff33] shadow-[0_0_8px_rgba(51,255,51,0.5)];
+  }
+  .nav-link-text {
+    @apply text-sm text-[#24d524db] px-2 py-1 uppercase tracking-wider;
+  }
+
+  .nav-link-text:hover {
+    @apply text-[#33ff33];
+  }
 }
