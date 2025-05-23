@@ -31,10 +31,10 @@ const BlogListPage: React.FC = () => {
   ]);
 
   return (
-    <div>
-      <h1 className="text-2xl mb-8 font-bold tracking-wider">BLOG ENTRIES</h1>
+    <div className="flex flex-col  h-full text-green-500 p-4">
+      <h1 className="text-lg  mb-8 font-bold tracking-wider">BLOG ENTRIES</h1>
 
-      <div className="grid gap-8">
+      <div className="grid gap-8 w-full">
         {posts.map((post) => (
           <article key={post.slug} className="border border-[#33ff33] p-5 hover:shadow-[0_0_12px_rgba(51,255,51,0.3)] transition-all">
             <h2 className="text-xl font-bold mb-2">{post.title}</h2>

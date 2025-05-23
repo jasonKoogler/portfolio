@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client'
 // import { store } from './appStore.js'
 import { appRouter } from '@/app/appRouter'
 import { RouterProvider } from 'react-router'
+import './App.css'
 // import { ThemeProvider } from '@/entities/theme'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

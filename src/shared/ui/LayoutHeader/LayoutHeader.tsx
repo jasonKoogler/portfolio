@@ -19,19 +19,13 @@ export const LayoutHeader = (props: Props) => {
 
     return (
         <header
-            className={`bg-background flex sticky top-0 shrink-0 p-2 justify-between items-center shadow-md z-4`}
+            className={`flex w-full sticky top-0 shrink-0  z-4 bg-background`}
         >
-            <div className="flex gap-6 pl-2 pr-5">
-                {props.leftContentSlot}
-                {/* <Logo /> */}
-            </div>
+
 
             {props.middleContentSlot}
 
-            <div className="flex gap-4 pl-5">
-                {props.rightContentSlot}
-                {props.profileSlot}
-            </div>
+
         </header>
     )
 }

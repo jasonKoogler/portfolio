@@ -5,8 +5,8 @@ const Navigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="bg-background p-4 border-b border-[#33ff33]">
-      <div className="flex gap-5">
+    <nav className="flex justify-between p-4 border-b border-[#33ff339e]">
+      <div className="">
         <Link
           to="/"
           className={`nav-link ${location.pathname === '/' ? 'nav-link-active' : ''}`}

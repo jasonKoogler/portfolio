@@ -9,9 +9,7 @@ import HomePage from '@/pages/HomePage'
 import ProjectPage from '@/pages/ProjectPage'
 import ProjectsListPage from '@/pages/ProjectsListPage'
 import { createBrowserRouter } from 'react-router'
-import BlogLayout from './layouts/BlogLayout'
 import MainLayout from './layouts/MainLayout'
-import ProjectLayout from './layouts/ProjectLayout'
 
 export const appRouter = () => {
     return createBrowserRouter([
@@ -27,7 +25,8 @@ export const appRouter = () => {
                         },
                         {
                             // Layout route, so no path for the parent
-                            Component: BlogLayout,
+                            // Component: BlogLayout,
+                            path: "blog",
                             children: [
                                 { index: true, Component: BlogListPage },
                                 { path: ":post", Component: BlogPostPage },
@@ -35,7 +34,8 @@ export const appRouter = () => {
                         },
                         {
                             // Layout route, so no path for the parent
-                            Component: ProjectLayout,
+                            // Component: ProjectLayout,
+                            path: "projects",
                             children: [
                                 { index: true, Component: ProjectsListPage },
                                 { path: ":pid", Component: ProjectPage },

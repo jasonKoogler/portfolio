@@ -2,22 +2,17 @@ import { type ReactNode } from "react"
 import { Outlet } from "react-router"
 
 type Props = {
-    navbarSlot?: ReactNode
+
     headerSlot?: ReactNode
     bottomSlot?: ReactNode
-    announcementSlot?: ReactNode
-    sidebarSlot?: ReactNode
     children?: ReactNode
 }
 
 export const Layout = (props: Props) => {
     return (
-        <div className="flex flex-col h-screen">
-            {props.announcementSlot}
-            {props.navbarSlot}
+        <div className="flex flex-col h-screen w-screen overflow-y-auto  bg-background">
             {props.headerSlot}
-            <div className="flex flex-1 overflow-hidden">
-                {props.sidebarSlot}
+            <div className="flex flex-1 pt-10">
                 {props.children || <Outlet />}
             </div>
             {props.bottomSlot && (

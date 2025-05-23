@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import useTypewriter from '../hooks/useTypewriter';
 
 const HomePage: React.FC = () => {
@@ -11,14 +10,9 @@ const HomePage: React.FC = () => {
   });
 
   return (
-    <div className="w-full h-full flex flex-col bg-background p-4">
-      <pre className="text-[#24d524db] font-mono whitespace-pre-wrap leading-relaxed text-lg mb-8">{displayedText}</pre>
-      {isComplete && (
-        <div className="flex gap-4 mt-5">
-          <Link to="/projects" className="crt-button">VIEW PROJECTS</Link>
-          <Link to="/contact" className="crt-button">GET IN TOUCH</Link>
-        </div>
-      )}
+    <div className="w-full h-full flex flex-col p-4">
+      <pre className="text-[#24d524db] font-mono whitespace-pre-wrap leading-relaxed text-sm mb-8">{displayedText}</pre>
+
     </div>
   );
 };
