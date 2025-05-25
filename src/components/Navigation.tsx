@@ -5,7 +5,7 @@ const Navigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="flex justify-between p-4 border-b border-[#33ff339e] w-full">
+    <nav className="flex justify-between p-4 border-b border-primary w-full">
       <div className="">
         <Link
           to="/"

@@ -7,7 +7,7 @@ import Navigation from '../../components/Navigation';
 
 const MainLayout: React.FC = () => {
   return (
-    <div className="">
+    <div className="scrollbar-thumb-primary scrollbar-track-background text-primary">
       <Layout
         headerSlot={<LayoutHeader middleContentSlot={<Navigation />} />}
         bottomSlot={<LayoutFooter />}

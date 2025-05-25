@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="w-full h-full flex flex-col p-4">
-      <pre className="text-[#24d524db] font-mono whitespace-pre-wrap leading-relaxed text-sm mb-8">{displayedText}</pre>
+      <pre className="text-primary font-mono whitespace-pre-wrap leading-relaxed text-sm mb-8">{displayedText}</pre>
 
     </div>
   );

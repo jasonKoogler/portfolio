@@ -31,7 +31,7 @@ const BlogListPage: React.FC = () => {
   ]);
 
   return (
-    <div className="flex flex-col  h-full w-full text-green-500 p-6">
+    <div className="flex flex-col  h-full w-full text-green-500 p-6 overflow-y-scroll scrollbar-thin">
       <div className='flex flex-col md:mx-auto md:w-2/3'>
 
         <div className="grid gap-8 w-full md:items-center md:justify-center ">

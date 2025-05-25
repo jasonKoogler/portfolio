@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Sono:wght@200..800&display=swap");
 @import "tailwindcss";
+@plugin "tailwind-scrollbar";
 
 @theme {
   --font-sans: "Jura", sans-serif;
   --font-mono: "Sono", sans-serif;
   --scanlines: scanlines 2s linear infinite;
   --flicker: flicker 3s infinite alternate;
+  
+  --color-background: #23292b;
+  --color-primary: #36B985;
+  --color-primary-shadow: rgba(54, 185, 133, 0.5);
+  --color-primary-brighter: #50d7a1;
+  --color-secondary: #488a86;
+  --color-tertiary: #ccc5e2;
+  --color-quaternary: #298b5f;
 
   @keyframes scanlines {
     0% {
@@ -56,22 +65,22 @@
     @apply border border-[#33ff33] p-5 rounded transition-all hover:shadow-[0_0_15px_rgba(51,255,51,0.3)];
   }
 
-  .bg-background {
-    @apply bg-zinc-900;
-  }
+  /* .bg-background {
+    @apply bg-background;
+  } */
 
   .nav-link {
-    @apply px-3 py-2 uppercase tracking-wider transition-all rounded-md;
+    @apply px-3 py-2 uppercase tracking-wider transition-colors  rounded-md flex-1;
   }
 
   .nav-link-active {
-    @apply border border-[#33ff33] shadow-[0_0_8px_rgba(51,255,51,0.5)];
+    @apply border border-primary inset-shadow-[0_0_8px_var(--color-primary-shadow)] shadow-[0_0_8px_var(--color-primary-shadow)];
   }
   .nav-link-text {
-    @apply text-sm text-[#24d524db] px-2 py-1 uppercase tracking-wider;
+    @apply text-sm text-primary px-2  uppercase tracking-wider;
   }
 
   .nav-link-text:hover {
-    @apply text-[#33ff33];
+    @apply text-primary-brighter;
   }
 }
